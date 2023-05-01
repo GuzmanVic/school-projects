@@ -1,0 +1,80 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fff;
+}
+body {
+  background-color: rgb(25, 27, 53);
+  overflow:hidden;
+}
+a {
+  text-decoration: none;
+}
+h1{
+  font-size: 30px;
+}
+p {
+  font-size: 20px;
+}
+header nav {
+  text-align: right;
+  padding-right: 15%;
+  height: 40px;
+}
+header nav a {
+  margin-right: 10px;
+  font-size: larger;
+  border-radius: 15px;
+}
+header nav a:hover {
+  background-color: rgb(16, 22, 83);
+}
+#presentacion {
+  background: linear-gradient(90deg, #091794, #000535);
+  width: 102%;
+  height: 320px;
+  margin-left: -0.6%;
+  box-shadow: black 0px 1px 5px;
+  overflow: hidden;
+}
+#presentacion .contenido {
+  margin-left: 25%;
+  animation-duration: 3s;
+}
+#presentacion .contenido p {
+  text-align: left;
+  margin-right: 50%;
+}
+#presentacion .contenido h2{
+}
+#presentacion .contenido .redes nav a {
+  padding: 2px;
+}
+#presentacion .contenido .redes {
+  margin-top: 60px;
+}
+#presentacion .redes nav a img {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid;
+  border-radius: 50%;
+  filter: invert(0.5) sepia(5) hue-rotate(800deg) saturate(10%);
+}
+#presentacion .MiFoto {
+  margin-top: -20%;
+  margin-left: 53%;
+}
+#presentacion .MiFoto .Yo {
+  width: 47%;
+  margin-top: -15%;
+  animation-duration: 3s;
+  animation-name: entrada;
+}
+@keyframes entrada {
+  from {
+    margin-left: 100%;
+    width: 47%;
+  }
+  to {
+    width: 47%;
+  }
+}

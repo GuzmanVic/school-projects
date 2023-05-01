@@ -1,0 +1,32 @@
+table,th,td{
+    border: 1px solid black;
+    text-align: left;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 5px 0px;
+    /*border-spacing: 5px, sirve par aagregar un espaciado en los margenes de la tabla.*/
+}
+td{
+    text-align: left;
+}
+table{
+    width: 100%;
+}
+caption{
+    color: #e63946;
+    font-family: 'Trocchi',serif;
+    font-size: 45px;
+    line-height: 70px;
+}
+th{
+    color: #f1faee;
+    background-color: #1d3557;
+}
+/*Renglones pares*/
+tr:nth-child(even){
+    background-color: #f1faee;
+}
+/*Renglones impares*/
+tr:nth-child(odd){
+    background-color: #a8dadc;
+}

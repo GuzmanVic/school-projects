@@ -1,0 +1,11 @@
+.fuente1{
+    letter-spacing: 0.5ex;
+    text-transform: initial;
+}
+.fuente2{
+    word-spacing: 0.3cm;
+    text-transform: uppercase;
+}
+.fuente3{
+text-transform: capitalize;
+}

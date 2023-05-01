@@ -1,0 +1,22 @@
+.principal{
+    display: inline-flex;
+}
+div{
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.selects{
+    margin-left: 0;
+    display: inline-flex;
+}
+.selectD{
+    margin-left: 0;
+    
+}
+.elements{
+    display: inline-flex;
+}
+.elementos div{
+    border: dotted 1px black;
+    margin: 0;
+}

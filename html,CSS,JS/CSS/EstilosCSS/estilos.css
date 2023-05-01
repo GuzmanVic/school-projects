@@ -1,0 +1,28 @@
+h1 {
+  color: blue;
+}
+p {
+  color: white;
+  background-color: red;
+  padding: 15px;
+  border: 10px solid powderblue;
+  /*margin-top: 40px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  */
+  margin: 40px 10px 20px 10px;
+  /*si se quiere simplificar el tamaño de los margenes, se pueden poner unicamente 2 o 3 valores, 
+  en el caso de 3 valores, el primer valor seria el margen superior, el segundo valor serían los margenes 
+  izquierda y derecha respectivamente, y el tercer valor seria el valor inferior. */
+
+  /*Por otro lado, si lo dividimos solo en dos valores, el primer valor serian los valores de arriba y abajo
+  y el segundo valor serian izquierda y derecha*/
+
+  /*Todas estas caracteristicas pueden aplicarse para border y padding.*/
+  margin: auto;
+  /*AUTO se utiliza para centrar el elemento de manera horizontal.*/
+  /*Se puede agregar una medida para ajustar que tanto se puede centrar el elemento.*/
+  
+  text-align: center;
+}

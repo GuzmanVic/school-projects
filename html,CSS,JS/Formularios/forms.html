@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="CSS/forms.css" />
+  </head>
+  <body>
+    <h1>Formularios en html</h1>
+    <div class="principal">
+      <div>
+        <h2>Elementos de un formulario</h2>
+        <!---Todos los atributos a continuación son aplicables a la etiqueta "form"-->
+        <!---el atributo "action" sirve para enviar el formulario al servidor donde se procesarán los datos de formulario.-->
+        <!---El atributo "autocomplete=on/off" nos sirve para inhabilitar/habilitar el autocompletado -->
+        <!---El atributo "target=_self" es el que está por defecto en ls navegadores, y este se encarga de que todos los procesos y respuestas 
+          se ejecuten en la misma pestaña,
+        mientras que "target=_blank se utiliza para que los procesos y respuestas se ejecuten en una nueva pestaña"-->
+        <form action="mi_servidor">
+          <!---La etiqueta fieldset, sirve para agregar un marco al formulario con el que estamos trabajando.-->
+          <fieldset>
+            <!---La etiqueta legend se complemente con fieldset y esta nos sirve para agregar un titulo al formulario en cuestión-->
+            <legend>Datos de la persona</legend>
+            <div class="elements">
+              <div>
+                <label for="idPersona">ID Persona:</label><br />
+                <!---"Readonly", para que el input text sea clickeable pero inmodificable, aún siendo inmodifcable, la información dentro del 
+                  input será enviada al servidor. si queremos que el elemento tampoco sea clickeable se complementa con el atributo 
+                  "disabled=true", sin embargo, si solo agregamos el atributo "disabled" y no el "readonly" el elemento será NO clickable 
+                  pero sus datos no serán enviados al servidor por lo cual, lo mas recomendable es utilizar AMBOS atributos para mejor 
+                  estetica y buen funcionamiento del sistema-->
+                <input
+                  type="text"
+                  id="idPersona"
+                  name="idPersona"
+                  readonly="true"
+                  disabled="true"
+                  value="Este es un text inmodificable"
+                  required="true"
+                /><br />
+                  <!---La etiqueta "input hidden" crea una entrada invisible para el usuario, pero que de igual manera los datos de la 
+                    misma serán enviados al servidor este elemento nos es inservible en páginas básicas, pero puede ser bien utilizado 
+                    para páginas mas complejas que se complementen con JS.-->
+                <input type="hidden" id="sistema" name="sistema" value="SAP">
+                <label for="nombre">Nombre:</label><br />
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Escribe tu nombre"
+                  required="true"
+                /><br />
+                <label for="apellido">Apellido:</label><br />
+                <input
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  placeholder="Escribe tu apellido"
+                  required="true"
+                /><br />
+                <label for="edad">Edad:</label><br />
+                <!---PARA CAPTURAR VALORES DECIMALES  SE AGREGA EL ATRIBUTO *step="any" al input numerico-->
+                <input type="number" name="edad" id="edad" /><br />
+                <label for="">Género</label><br />
+                <!---Para vincular dos o mas radiobuttons, los radios en cuestión deben tener el mismo nombre-->
+                <input
+                  type="radio"
+                  id="femenino"
+                  name="genero"
+                  value="femenino"
+                />
+                <label for="femenino">Femenino</label>
+                <input
+                  type="radio"
+                  id="masculino"
+                  name="genero"
+                  value="masculino"
+                />
+                <label for="masculino">Masculino</label><br />
+              </div>
+              <div>
+                <label for="">Géneros músicales favoritos.</label><br />
+                <!---Para vincular dos o mas checkboxes, los checks en cuestión deben tener el mismo nombre-->
+                <input type="checkbox" id="clasica" name="musica" />
+                <label for="clasica">Clásica</label>
+                <input type="checkbox" name="musica" id="metal" />
+                <label for="metal">Metal</label>
+                <input type="checkbox" name="musica" id="rock" />
+                <label for="rock">Rock</label><br />
+                <input type="checkbox" name="musica" id="pop" />
+                <label for="pop">Pop</label>
+                <input type="checkbox" name="musica" id="dubstep" />
+                <label for="dubstep">Dubstep</label>
+                <input type="checkbox" name="musica" id="regional" />
+                <label for="regional">Regional</label><br />
+                <label for="emalil">Email:</label><br />
+                <div class="selects">
+                  <div class="selectD">
+                    <h4>Select desplegable:</h4>
+                    <label for="guitarras">Marca de guitarras favorita</label
+                    ><br />
+                    <select name="guitarras" id="guitarras">
+                      <option value="gibson">Gibson</option>
+                      <!---Para marcar un valor como default en un elemento select, se debe agregar el atributo "selected" como true-->
+                      <option value="fender" selected="true">Fender</option>
+                      <option value="kaiser">Kaiser</option>
+                      <option value="schechter">Schechter</option>
+                      <option value="takamine">Takamine</option>
+                    </select>
+                  </div>
+                  <div class="selectM">
+                    <!---Para sellecionar mas de una opción en un select multiple, se debe presionar la tecla Ctrl mientras se desplaza por las opciones-->
+                    <h4>Select Multiple:</h4>
+                    <label for="bajos">Marca de bajos favorita</label><br />
+                    <select name="bajos" id="bajos" multiple="true">
+                      <option value="gibson">Gibson</option>
+                      <!---Para marcar un valor como default en un elemento select, se debe agregar el atributo "selected" como true-->
+                      <option value="fender" selected="true">Fender</option>
+                      <option value="kaiser">Kaiser</option>
+                      <option value="schechter">Schechter</option>
+                      <option value="takamine">Takamine</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="comentario">Comentario</label><br />
+                <textarea
+                  name="comentario"
+                  id="comentario"
+                  cols="30"
+                  rows="2"
+                  placeholder="Escribe un comentario para el desarollador"
+                ></textarea
+                ><br />
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" /><br />
+                <label for="password">Contraseña</label><br />
+                <input type="password" name="password" id="password" /><br />
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Reestablecer.">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <!---El método get se visualiza en la URL del sitio, si no se especifica en el form que tipo de metodo se utilizará, 
+        html tomará por defecto el método GET -->
+      <div>
+        <form method="GET">
+          <fieldset>
+            <legend>Método GET</legend>
+
+            <label for="nombre">Nombre:</label><br />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escribe tu nombre"
+              required="true"
+            /><br />
+            <label for="apellido">Apellido:</label><br />
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              placeholder="Escribe tu apellido"
+              required="true"
+            /><br />
+            <input type="submit" value="Enviar" />
+          </fieldset>
+        </form>
+      </div>
+
+      <!---El método post, oculta lo enviado al servidor, de manera que los datos no se visualizann en la URL del sitio-->
+      <div>
+        <form method="post">
+          <fieldset>
+            <legend>Método POST</legend>
+            <label for="nombre">Nombre de usuario:</label><br />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escribe tu nombre"
+              required="true"
+            /><br />
+
+            <label for="password">Contraseña</label><br />
+            <input type="password" name="password" id="password" /><br />
+            <input type="submit" value="Enviar" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

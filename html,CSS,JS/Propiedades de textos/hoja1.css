@@ -1,0 +1,18 @@
+.fuente1 {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  text-decoration: double;
+  text-align: center;
+}
+.fuente2 {
+    text-align: right;
+    text-decoration: line-through;
+  font-family: Aldrich, impact, sans-serif;
+}
+.fuente3{
+    font: 80px;
+    text-decoration: dotted;
+    color: aqua;
+    background-color: red;
+}
