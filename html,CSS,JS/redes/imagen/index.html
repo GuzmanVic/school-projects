@@ -1,17 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagina vico</title>
     <link rel="stylesheet" href="css/estlos.css">
 </head>
+
 <body>
+
     <h1>Este es un ejemplo de una imagen en html</h1>
-    <img width="250" height="250" class="orilla" src="imagenes/mimido.jpg" alt="yo mimido.jpg">
-    <img width="250" height="250" class="centro" src="imagenes/IMG-20210914-WA0000.jpg" alt="yo.jpg">
-    <img width="250" height="250"class="orilla" src="imagenes/IMG-20211105-WA0012.jpg" alt="pelon.jpg">
-    <img width="250" height="250" class="maestra"src="imagenes/Imagen de WhatsApp 2023-03-15 a las 11.58.36.jpg" alt="maestra.jpg">
+
+    <!-- Agrega un identificador a las imágenes -->
+    <img id="imagen1" width="250" height="250" class="orilla" src="imagenes/mimido.jpg" alt="yo mimido.jpg">
+    <img id="imagen2" width="250" height="250" class="centro" src="imagenes/IMG-20210914-WA0000.jpg" alt="yo.jpg">
+    <img id="imagen3" width="250" height="250" class="orilla" src="imagenes/IMG-20211105-WA0012.jpg" alt="pelon.jpg">
+    <img id="imagen4" width="250" height="250" class="maestra"
+        src="imagenes/Imagen de WhatsApp 2023-03-15 a las 11.58.36.jpg" alt="maestra.jpg">
+        <!-- Agrega un botón de reproducción -->
+        <br>
+    <button id="reproducir">Reproducir</button>
+
+    <!-- El reproductor de audio con un identificador -->
+    <audio id="reproductor" controls>
+        <source src="No Hay Novedad - Los Cadetes de Linares.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <h1>Victor Manuel Guzmán Loredo</h1>
+    <h2>Victor Manuel Guzmán Loredo</h2>
+    <h3>Victor Manuel Guzmán Loredo</h3>
+    <h4>Victor Manuel Guzmán Loredo</h4>
+    <h5>Victor Manuel Guzmán Loredo</h5>
+    <h6>Victor Manuel Guzmán Loredo</h6>
+    <p>1. Hola, soy omelo</p>
+    <p>2. omelo chino</p>
+    <a href="https://www.w3schools.com/html/html_basic.asp">Link a pagina</a> ||
+    <a href="pagina2.html">Página 2</a>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_NIrco_qje8" frameborder="0" allowfullscreen></iframe>
 </body>
+<script>
+    // Obtén una referencia al botón de reproducción y al reproductor de audio
+    const botonReproducir = document.getElementById('reproducir');
+    const reproductor = document.getElementById('reproductor');
+
+    // Obtén referencias a las imágenes
+    const imagen1 = document.getElementById('imagen1');
+    const imagen2 = document.getElementById('imagen2');
+    const imagen3 = document.getElementById('imagen3');
+    const imagen4 = document.getElementById('imagen4');
+
+    // Agrega un evento de clic al botón de reproducción
+    botonReproducir.addEventListener('click', () => {
+        // Verifica si el audio ya está reproduciendo
+        if (reproductor.paused) {
+            // Comienza a reproducir la canción
+            reproductor.play();
+            // Agrega la animación a las imágenes cuando se hace clic en el botón
+            imagen1.style.animation = 'spin infinite 20s linear';
+            imagen2.style.animation = 'spin-reverse infinite 20s linear';
+            imagen3.style.animation = 'spin infinite 20s linear';
+        } else {
+            // Pausa la canción si ya está reproduciendo
+            reproductor.pause();
+            // Detiene la animación de las imágenes
+            imagen1.style.animation = 'none';
+            imagen2.style.animation = 'none';
+            imagen3.style.animation = 'none';
+        }
+    });
+</script>
+
 </html>

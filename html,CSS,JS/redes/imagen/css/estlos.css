@@ -5,16 +5,7 @@ img{
     border-radius: 0%;
 
 }
-@media (prefers-reduced-motion: no-preference) {
-  .orilla {
-    animation: spin infinite 20s linear;
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-    .centro {
-      animation: spin-reverse infinite 20s linear;
-    }
-  }
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -31,5 +22,8 @@ img{
     to {
       transform: rotate(-360deg);
     }
+  }
+  .gif{
+   
   }
   
